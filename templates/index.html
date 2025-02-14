@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Password Strength Checker</h1>
+    <form method="POST">
+        Enter your password: <input type="text" name="password" aria-label="Enter your password" required>
+        <button type="submit">Check Strength</button>
+    </form>
+
+    {% if password %}
+    <h2>Password: {{ password }}</h2>
+    <h3>Strength: {{ strength }}</h3>
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
